@@ -14,6 +14,6 @@
 </head>
 <body>
   <h1>My post</h1>
-  <p> {{$post}}</p>
+  <p> {{$post->body}}</p>
 </body>
 </html>
