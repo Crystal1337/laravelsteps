@@ -13,6 +13,14 @@ use App\Http\Controllers\PostController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/template', function () {
+    return view('template_welcome');
+});
+
+Route::get('/template/about', function () {
+    return view('template_about');
+});
+
 
 Route::get('/', function () {
     return view('welcome');
