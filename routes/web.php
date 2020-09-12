@@ -13,18 +13,6 @@ use App\Http\Controllers\ArticleController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/template', function () {
-    return view('template_welcome');
-});
-
-Route::get('/template/about', function () {
-    return view('template_about', [
-      'articles' => App\Article::take(3)->latest()->get()
-    ]);
-});
-
-Route::get('/template/articles/{article}', [ArticleController::class, 'show']);
-Route::get('/template/articles' , [ArticleController::class, 'index']);
 
 Route::get('/', function () {
     return view('welcome');
@@ -57,3 +45,17 @@ Route::get('/post/{post}', function ($post) {
 */
 
 Route::get('/post/{post}', [PostController::class, 'show']);
+
+Route::get('/template', function () {
+    return view('template_welcome');
+});
+
+Route::get('/template/about', function () {
+    return view('template_about', [
+      'articles' => App\Article::take(3)->latest()->get()
+    ]);
+});
+Route::get('/template/articles/create' , [ArticleController::class, 'create']);
+Route::post('/template/articles', [ArticleController::class, 'store']);
+Route::get('/template/articles/{article}', [ArticleController::class, 'show']);
+Route::get('/template/articles' , [ArticleController::class, 'index']);
