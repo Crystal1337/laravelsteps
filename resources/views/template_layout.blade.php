@@ -17,8 +17,8 @@ Released   : 20140225
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
-<link href="../default.css" rel="stylesheet"/>
-<link href="../fonts.css" rel="stylesheet"/>
+<link href="/css/default.css" rel="stylesheet"/>
+<link href="/css/fonts.css" rel="stylesheet"/>
 
 </head>
 <body>
@@ -32,7 +32,7 @@ Released   : 20140225
   				<li class="{{Request::path() === 'template' ? 'current_page_item' : ''}}"><a href="/template" accesskey="1" title="">Homepage</a></li>
   				<li><a href="#" accesskey="2" title="">Our Clients</a></li>
   				<li class="{{Request::path() === 'template/about' ? 'current_page_item' : ''}}"><a href="/template/about" accesskey="3" title="">About Us</a></li>
-  				<li><a href="#" accesskey="4" title="">Careers</a></li>
+  				<li class="{{Request::path() === 'template/articles' ? 'current_page_item' : ''}}"><a href="/template/articles" accesskey="4" title="">Articles</a></li>
   				<li><a href="#" accesskey="5" title="">Contact Us</a></li>
   			</ul>
   		</div>
